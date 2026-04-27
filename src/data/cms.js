@@ -1,0 +1,286 @@
+import {
+  CodeIcon,
+  BrainIcon,
+  LockIcon,
+  GlobeIcon,
+  MonitorIcon,
+  DatabaseIcon,
+  TrendingIcon,
+  LayersIcon,
+} from '../components/ToolIcons';
+
+export const profile = {
+  name: 'Jainish Jigneshbhai Patel',
+  shortName: 'Jainish Patel',
+  title: 'AI DEVELOPER',
+  bio: 'Results-driven AI Developer with hands-on experience building and deploying end-to-end AI solutions.',
+  description:
+    'Specialized in LLM fine-tuning (LoRA, PEFT), Retrieval-Augmented Generation (RAG, GraphRAG), and agentic AI workflows using LangChain, HuggingFace, FastAPI, PyTorch, and Google Gemini API.',
+  // location: 'Ahmedabad, Gujarat, India',
+  // email: 'jainishpatel188@gmail.com',
+  // phone: '+91 7623001319',
+  availability: 'Open to AI/ML internships and full-time AI developer opportunities.',
+  stats: [
+    { num: '1+', label: 'YEARS OF AI/ML EXPERIENCE' },
+    { num: '15+', label: 'PROJECTS SHIPPED' },
+    { num: '3', label: 'ROLES COMPLETED' },
+  ],
+  heroCards: [
+    {
+      id: 'experience',
+      label: 'RAG, GRAPHRAG, MCP, AGENTIC AI',
+      route: '/experience',
+      theme: 'orange',
+    },
+    {
+      id: 'projects',
+      label: 'FASTAPI, LANGCHAIN, PYTORCH, REACT',
+      route: '/projects',
+      theme: 'green',
+    },
+  ],
+  social: {
+    github: 'https://github.com/Jainilpatel15',
+    linkedin: 'https://www.linkedin.com/in/jainil-patel-b22543341/',
+    email: 'mailto:jainishpatel188@gmail.com',
+  },
+};
+
+export const projects = [
+  {
+    id: 1,
+    name: 'Socratic Lens',
+    tag: 'AI-powered educational companion that analyzes images and documents, then teaches through Socratic Q&A and quiz generation.',
+    stack: 'Next.js 16, React 19, Gemini 2.5 Flash, Tailwind CSS, TypeScript, Docker',
+    color: '#263145',
+  },
+  {
+    id: 2,
+    name: 'Multi-Agent WhatsApp POS Orchestrator',
+    tag: 'Production-ready WhatsApp AI assistant for POS operations with 18 active agents and 45 domain tools.',
+    stack: 'FastAPI, LLaMA 3.1, MongoDB Atlas, WhatsApp Cloud API',
+    color: '#2d243f',
+  },
+  {
+    id: 3,
+    name: 'AtriumChain Real Estate Tokenization Platform',
+    tag: 'Fractional ownership platform on XRPL with investor, admin, and super-admin apps plus secure wallet flows.',
+    stack: 'FastAPI, React 18, Vite 5, XRPL, MongoDB Atlas, JWT',
+    color: '#1f3344',
+  },
+  {
+    id: 4,
+    name: 'Blockchain Document Vault',
+    tag: 'Secure document assistant with smart-contract hash anchoring, tamper detection, and ownership-aware retrieval.',
+    stack: 'FastAPI, Solidity, Hardhat, Web3.py, Gemini API, Docker Compose',
+    color: '#35311f',
+  },
+  {
+    id: 5,
+    name: 'Sahl AI Onboarding and Menu Intelligence',
+    tag: 'Full-stack onboarding product with AI menu extraction and structured RAG for competitor pricing insights.',
+    stack: 'FastAPI, React (Vite), MongoDB Atlas, OpenAI API, JWT, Tailwind CSS',
+    color: '#243b2a',
+  },
+  {
+    id: 6,
+    name: 'Hospital AI Assistant (Post-Discharge Care)',
+    tag: 'Voice-enabled patient care system with router-based multi-agent architecture and real-time SSE streaming.',
+    stack: 'Python, FastAPI, Ollama, LLaMA 3.1, MongoDB, Next.js, Kokoro TTS',
+    color: '#3d2b2b',
+  },
+  {
+    id: 7,
+    name: 'Traditional RAG and GraphRAG System',
+    tag: 'Multi-source RAG assistant supporting PDF, CSV, and web inputs with graph-based multi-hop contextual retrieval.',
+    stack: 'FastAPI, LLaMA 3.1, Nomic Embeddings, FAISS, GraphRAG',
+    color: '#20353a',
+  },
+  {
+    id: 8,
+    name: 'Fine-Tuned LLM (TinyLLaMA)',
+    tag: 'Fine-tuned TinyLLaMA-1.1B-Chat using LoRA and served it with FastAPI, then deployed for scalable inference.',
+    stack: 'Python, PyTorch, PEFT, LoRA, FastAPI, Hugging Face Spaces',
+    color: '#2e2440',
+  },
+  {
+    id: 9,
+    name: 'LangChain FAQ Assistant',
+    tag: 'CSV-based semantic Q&A system using FAISS vector search and Gemini-driven context-aware response generation.',
+    stack: 'Python, LangChain, Hugging Face, FAISS, Gemini API',
+    color: '#2f2f25',
+  },
+  {
+    id: 10,
+    name: 'Face Detection and Live Speech Translation',
+    tag: 'Interactive real-time assistant combining facial analysis, speech-to-text, translation, and text-to-speech output.',
+    stack: 'OpenCV, NumPy, SpeechRecognition, GoogleTrans, Pyttsx3',
+    color: '#272f43',
+  },
+  {
+    id: 11,
+    name: 'Disease Prediction',
+    tag: 'Web application that predicts heart disease and stroke risk with machine learning-backed recommendations.',
+    stack: 'Django, Machine Learning, HTML, Bootstrap',
+    color: '#3d2a1f',
+  },
+  {
+    id: 12,
+    name: 'Text to Speech Web App',
+    tag: 'Simple and interactive application that converts typed text into spoken output through an intuitive UI.',
+    stack: 'Django, HTML, Bootstrap',
+    color: '#20403a',
+  },
+  {
+    id: 13,
+    name: 'NestCraft Furniture Website',
+    tag: 'Responsive furniture web experience with clean product presentation and structured client-side data rendering.',
+    stack: 'React.js, HTML, CSS, JavaScript, JSON',
+    color: '#422f23',
+  },
+  {
+    id: 14,
+    name: 'Flight Management System',
+    tag: 'Desktop-style Java system for route, schedule, and passenger data management with persistent storage.',
+    stack: 'Java, JDBC, MySQL',
+    color: '#1f2e3f',
+  },
+  {
+    id: 15,
+    name: 'Library Management System',
+    tag: 'Core Java project for issuing, tracking, and maintaining book records in a structured workflow.',
+    stack: 'Java',
+    color: '#2c2c2c',
+  },
+  {
+    id: 16,
+    name: 'Game Zone',
+    tag: 'Python game collection built with Pygame to demonstrate event loops, game physics, and interactive UX basics.',
+    stack: 'Python, Pygame',
+    color: '#25253b',
+  },
+];
+
+export const jobs = [
+  {
+    id: 1,
+    role: 'AI Junior Developer',
+    company: 'iGenerate Technology Private Limited',
+    date: 'Dec 2025 - Apr 2026',
+    location: 'Ahmedabad, Gujarat',
+    desc: 'Built production-grade AI systems with scalable LLM workflows, agent orchestration, and backend integration.',
+    highlights: [
+      'Engineered production-ready AI/ML pipelines from preprocessing and training to deployment.',
+      'Integrated LLMs with RAG and MCP patterns to build context-aware applications.',
+      'Designed agentic workflows for autonomous multi-step task execution.',
+      'Optimized prompt engineering strategy for stronger domain-level response quality.',
+      'Collaborated on REST APIs to deliver complete AI-powered product features.',
+    ],
+    highlighted: true,
+  },
+  {
+    id: 2,
+    role: 'AIML Intern',
+    company: 'iGenerate Technology Private Limited',
+    date: 'Jun 2025 - Dec 2025',
+    location: 'Ahmedabad, Gujarat',
+    desc: 'Focused on NLP and generative AI model development, optimization, and semantic document intelligence.',
+    highlights: [
+      'Built and fine-tuned deep learning models using PyTorch and Hugging Face Transformers.',
+      'Created semantic search and question answering pipelines with Sentence Transformers.',
+      'Ran optimization experiments for downstream LLM performance gains.',
+      'Contributed to complete data workflows: collection, cleaning, and feature engineering.',
+    ],
+    highlighted: false,
+  },
+  {
+    id: 3,
+    role: 'Python Developer Intern',
+    company: 'eProcurement Technologies Ltd.',
+    date: 'Jan 2025 - Jun 2025',
+    location: 'Ahmedabad, Gujarat',
+    desc: 'Worked on conversational AI backend initiatives and automation-heavy procurement systems.',
+    highlights: [
+      'Built multilingual tender scraping with Selenium and BeautifulSoup for Chinese data translation.',
+      'Automated report generation using ReportLab and persisted data in MySQL.',
+      'Developed Python ingestion and transformation scripts across backend services.',
+      'Integrated external APIs to streamline data-driven procurement workflows.',
+    ],
+    highlighted: false,
+  },
+];
+
+export const tools = [
+  {
+    id: 1,
+    name: 'Languages',
+    category: 'Python, JavaScript',
+    icon: <CodeIcon />,
+  },
+  {
+    id: 2,
+    name: 'AI / ML / DL',
+    category: 'LLMs, RAG, GraphRAG, Agentic AI, Prompt Engineering, PyTorch',
+    icon: <BrainIcon />,
+  },
+  {
+    id: 3,
+    name: 'LLM Ecosystem',
+    category: 'LangChain, LangGraph, Hugging Face Transformers, Sentence Transformers, NLTK',
+    icon: <LockIcon />,
+  },
+  {
+    id: 4,
+    name: 'Backend and APIs',
+    category: 'FastAPI, REST APIs, BeautifulSoup',
+    icon: <GlobeIcon />,
+  },
+  {
+    id: 5,
+    name: 'Web Development',
+    category: 'React.js, Next.js, HTML, CSS, Vite',
+    icon: <MonitorIcon />,
+  },
+  {
+    id: 6,
+    name: 'Data and Databases',
+    category: 'MongoDB, FAISS, Data preprocessing, Feature engineering',
+    icon: <DatabaseIcon />,
+  },
+  {
+    id: 7,
+    name: 'Model Optimization',
+    category: 'LoRA, PEFT, Fine-tuning, Evaluation pipelines',
+    icon: <TrendingIcon />,
+  },
+  {
+    id: 8,
+    name: 'Deployment',
+    category: 'Hugging Face Spaces, Uvicorn, Docker-based workflows',
+    icon: <LayersIcon />,
+  },
+];
+
+export const blogPosts = [
+  {
+    id: 1,
+    title: 'Bachelor of Computer Science and Technology',
+    desc: 'LJ Institute of Engineering and Technology, Ahmedabad, India. Focused on software engineering fundamentals and applied AI systems.',
+    date: 'Aug 2022 - 2026',
+    readTime: 'Education',
+  },
+  {
+    id: 2,
+    title: 'Certifications and Continuous Learning',
+    desc: 'Exploratory Data Analysis for ML, HTML CSS and JavaScript for Web Developers, Inheritance and Data Structures in Java, Introduction of Java, Claude Code in Action.',
+    date: 'Ongoing',
+    readTime: 'Certificates',
+  },
+  {
+    id: 3,
+    title: 'Current Focus Areas',
+    desc: 'Building scalable AI applications with retrieval pipelines, autonomous multi-agent systems, and production-ready API architecture.',
+    date: '2026',
+    readTime: 'Focus',
+  },
+];

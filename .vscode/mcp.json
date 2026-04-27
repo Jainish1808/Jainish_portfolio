@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "unframer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@unframer/mcp-server",
+        "https://mcp.unframer.co/mcp?id=263a1b59030a0a7d5a0b46a65c810473520b3fccdb36977c8e425dced44a7dc8&secret=SuhQrdzBw41YYos0FbnAHewc54BnrVos"
+      ]
+    }
+  }
+}
