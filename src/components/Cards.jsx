@@ -102,18 +102,42 @@ export function BlogCard({ title, desc, date, readTime, thumbColor = '#2a2a2a' }
 }
 
 export function ContactForm() {
-  const [state, setState] = React.useState({ name: '', email: '', focus: '', message: '' });
+  const [state, setState] = React.useState({ name: '', email: '', subject: '', message: '' });
+  const [status, setStatus] = React.useState({ type: '', message: '' });
+  const [loading, setLoading] = React.useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setStatus({ type: '', message: '' });
 
-    const subject = encodeURIComponent(`Portfolio inquiry from ${state.name || 'visitor'}`);
-    const body = encodeURIComponent(
-      `Name: ${state.name}\nEmail: ${state.email}\nFocus: ${state.focus || 'Not specified'}\n\nMessage:\n${state.message}`
-    );
+    const formData = {
+      name: state.name,
+      email: state.email,
+      subject: state.subject,
+      message: state.message,
+      to: import.meta.env.VITE_SMTP_USER,
+      smtp_host: import.meta.env.VITE_SMTP_HOST,
+      smtp_port: import.meta.env.VITE_SMTP_PORT,
+      smtp_user: import.meta.env.VITE_SMTP_USER,
+      smtp_pass: import.meta.env.VITE_SMTP_PASS,
+    };
 
-    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
-    setState({ name: '', email: '', focus: '', message: '' });
+    try {
+      // Using mailto as fallback since direct SMTP from browser is not secure
+      const mailtoLink = `mailto:${formData.to}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      )}`;
+      
+      window.location.href = mailtoLink;
+      
+      setStatus({ type: 'success', message: 'Opening your email client...' });
+      setState({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -127,6 +151,7 @@ export function ContactForm() {
             placeholder="Your Name"
             value={state.name}
             onChange={(e) => setState((s) => ({ ...s, name: e.target.value }))}
+            required
           />
         </div>
         <div className="form-field">
@@ -134,38 +159,42 @@ export function ContactForm() {
           <input
             className="form-input"
             type="email"
-            placeholder="Your@email.com"
+            placeholder="your@email.com"
             value={state.email}
             onChange={(e) => setState((s) => ({ ...s, email: e.target.value }))}
+            required
           />
         </div>
       </div>
       <div className="form-field">
-        <label className="form-label">Area of interest</label>
-        <select
-          className="form-input form-select"
-          value={state.focus}
-          onChange={(e) => setState((s) => ({ ...s, focus: e.target.value }))}
-        >
-          <option value="">Select...</option>
-          <option value="AI product collaboration">AI product collaboration</option>
-          <option value="RAG or agent architecture">RAG or agent architecture</option>
-          <option value="Model fine-tuning">Model fine-tuning</option>
-          <option value="Internship or full-time opportunity">Internship or full-time opportunity</option>
-        </select>
+        <label className="form-label">Subject</label>
+        <input
+          className="form-input"
+          type="text"
+          placeholder="Subject"
+          value={state.subject}
+          onChange={(e) => setState((s) => ({ ...s, subject: e.target.value }))}
+          required
+        />
       </div>
       <div className="form-field">
         <label className="form-label">Message</label>
         <textarea
           className="form-input form-textarea"
-          placeholder="Message"
+          placeholder="Your message..."
           rows={5}
           value={state.message}
           onChange={(e) => setState((s) => ({ ...s, message: e.target.value }))}
+          required
         />
       </div>
-      <button className="form-btn" type="submit">
-        Send Message
+      {status.message && (
+        <div className={`form-status form-status--${status.type}`}>
+          {status.message}
+        </div>
+      )}
+      <button className="form-btn" type="submit" disabled={loading}>
+        {loading ? 'Sending...' : 'Send Message'}
       </button>
     </form>
   );
