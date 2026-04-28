@@ -1,6 +1,7 @@
 import React from 'react';
 import './Cards.css';
 import { profile } from '../data/cms.jsx';
+import RainDots from './RainDots';
 
 export function ArrowButton({ bg, color, onClick }) {
   return (
@@ -173,9 +174,10 @@ export function ContactForm() {
 export function Footer() {
   return (
     <footer className="footer">
-      <img 
-        src="https://framerusercontent.com/images/y02PDRmBGKW8YNzEEPkEe10yopc.png?scale-down-to=2048&width=4096&height=1705" 
-        alt="Footer" 
+      <RainDots />
+      <img
+        src="https://framerusercontent.com/images/y02PDRmBGKW8YNzEEPkEe10yopc.png?scale-down-to=2048&width=4096&height=1705"
+        alt="Footer"
         className="footer-image"
       />
     </footer>

@@ -1,0 +1,41 @@
+.rain-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.rain-dot {
+  position: absolute;
+  top: -20px;
+  background: var(--white);
+  border-radius: 50%;
+  animation: rain-fall linear infinite;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+@keyframes rain-fall {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(600px);
+    opacity: 0;
+  }
+}
