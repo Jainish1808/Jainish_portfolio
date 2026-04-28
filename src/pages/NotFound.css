@@ -1,0 +1,14 @@
+.notfound-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--black);
+}
+
+.notfound-title {
+  font-size: clamp(150px, 25vw, 300px);
+  font-weight: 700;
+  line-height: 100%;
+  color: var(--orange);
+}

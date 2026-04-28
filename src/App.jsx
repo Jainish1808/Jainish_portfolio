@@ -6,6 +6,7 @@ import Projects from './pages/Projects';
 import Experience from './pages/Experience';
 import Tools from './pages/Tools';
 import Blog from './pages/Blog';
+import NotFound from './pages/NotFound';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/experience" element={<Experience />} />
         <Route path="/tools" element={<Tools />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
