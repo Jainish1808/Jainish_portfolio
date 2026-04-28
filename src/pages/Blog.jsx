@@ -9,7 +9,7 @@ export default function Blog() {
     <div className="page-wrapper">
       <div className="outer">
         <div className="container">
-          <div className="left-col">
+          <div className="left-col hide-on-mobile">
             <StickyProfile />
           </div>
           <div className="right-col">

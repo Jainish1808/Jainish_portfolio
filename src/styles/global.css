@@ -23,6 +23,7 @@ body,
 #root {
   width: 100%;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -151,13 +152,17 @@ button {
   .left-col {
     position: static;
     width: 100%;
-    order: 2;
+    order: 1;
     display: flex;
     justify-content: center;
   }
 
+  .left-col.hide-on-mobile {
+    display: none;
+  }
+
   .right-col {
-    order: 1;
+    order: 2;
     width: 100%;
   }
 }
