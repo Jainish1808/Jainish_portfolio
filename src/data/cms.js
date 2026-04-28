@@ -40,8 +40,8 @@ export const profile = {
     },
   ],
   social: {
-    github: 'https://github.com/Jainilpatel15',
-    linkedin: 'https://www.linkedin.com/in/jainil-patel-b22543341/',
+    github: 'https://github.com/Jainish1808',
+    linkedin: 'https://www.linkedin.com/in/jainish-patel-6a8637279/',
     email: 'mailto:jainishpatel188@gmail.com',
   },
 };
