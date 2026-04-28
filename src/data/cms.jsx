@@ -1,7 +1,18 @@
+import {
+  CodeIcon,
+  BrainIcon,
+  LockIcon,
+  GlobeIcon,
+  MonitorIcon,
+  DatabaseIcon,
+  TrendingIcon,
+  LayersIcon,
+} from '../components/ToolIcons';
+
 export const profile = {
   name: 'Jainish Jigneshbhai Patel',
   shortName: 'Jainish Patel',
-  title: 'AI DEVELOPER ',
+  title: 'AI DEVELOPER',
   bio: 'Results-driven AI Developer with hands-on experience building and deploying end-to-end AI solutions.',
   description:
     'Specialized in LLM fine-tuning (LoRA, PEFT), Retrieval-Augmented Generation (RAG, GraphRAG), and agentic AI workflows using LangChain, HuggingFace, FastAPI, PyTorch, and Google Gemini API.',
@@ -29,8 +40,8 @@ export const profile = {
     },
   ],
   social: {
-    github: 'https://github.com/Jainilpatel15',
-    linkedin: 'https://www.linkedin.com/in/jainil-patel-b22543341/',
+    github: 'https://github.com/Jainish1808',
+    linkedin: 'https://www.linkedin.com/in/jainish-patel-6a8637279/',
     email: 'mailto:jainishpatel188@gmail.com',
   },
 };
@@ -204,49 +215,49 @@ export const tools = [
     id: 1,
     name: 'Languages',
     category: 'Python, JavaScript',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+    icon: <CodeIcon />,
   },
   {
     id: 2,
     name: 'AI / ML / DL',
     category: 'LLMs, RAG, GraphRAG, Agentic AI, Prompt Engineering, PyTorch',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg',
+    icon: <BrainIcon />,
   },
   {
     id: 3,
     name: 'LLM Ecosystem',
     category: 'LangChain, LangGraph, Hugging Face Transformers, Sentence Transformers, NLTK',
-    icon: 'https://api.iconify.design/simple-icons:langchain.svg?color=%2300ff00',
+    icon: <LockIcon />,
   },
   {
     id: 4,
     name: 'Backend and APIs',
     category: 'FastAPI, REST APIs, BeautifulSoup',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg',
+    icon: <GlobeIcon />,
   },
   {
     id: 5,
     name: 'Web Development',
     category: 'React.js, Next.js, HTML, CSS, Vite',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    icon: <MonitorIcon />,
   },
   {
     id: 6,
     name: 'Data and Databases',
     category: 'MongoDB, FAISS, Data preprocessing, Feature engineering',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+    icon: <DatabaseIcon />,
   },
   {
     id: 7,
     name: 'Model Optimization',
     category: 'LoRA, PEFT, Fine-tuning, Evaluation pipelines',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg',
+    icon: <TrendingIcon />,
   },
   {
     id: 8,
     name: 'Deployment',
     category: 'Hugging Face Spaces, Uvicorn, Docker-based workflows',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+    icon: <LayersIcon />,
   },
 ];
 
