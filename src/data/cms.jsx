@@ -1,14 +1,3 @@
-import {
-  CodeIcon,
-  BrainIcon,
-  LockIcon,
-  GlobeIcon,
-  MonitorIcon,
-  DatabaseIcon,
-  TrendingIcon,
-  LayersIcon,
-} from '../components/ToolIcons';
-
 export const profile = {
   name: 'Jainish Jigneshbhai Patel',
   shortName: 'Jainish Patel',
@@ -215,49 +204,49 @@ export const tools = [
     id: 1,
     name: 'Languages',
     category: 'Python, JavaScript',
-    icon: <CodeIcon />,
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
   },
   {
     id: 2,
     name: 'AI / ML / DL',
     category: 'LLMs, RAG, GraphRAG, Agentic AI, Prompt Engineering, PyTorch',
-    icon: <BrainIcon />,
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg',
   },
   {
     id: 3,
     name: 'LLM Ecosystem',
     category: 'LangChain, LangGraph, Hugging Face Transformers, Sentence Transformers, NLTK',
-    icon: <LockIcon />,
+    icon: 'https://api.iconify.design/simple-icons:langchain.svg?color=%2300ff00',
   },
   {
     id: 4,
     name: 'Backend and APIs',
     category: 'FastAPI, REST APIs, BeautifulSoup',
-    icon: <GlobeIcon />,
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg',
   },
   {
     id: 5,
     name: 'Web Development',
     category: 'React.js, Next.js, HTML, CSS, Vite',
-    icon: <MonitorIcon />,
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
   },
   {
     id: 6,
     name: 'Data and Databases',
     category: 'MongoDB, FAISS, Data preprocessing, Feature engineering',
-    icon: <DatabaseIcon />,
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
   },
   {
     id: 7,
     name: 'Model Optimization',
     category: 'LoRA, PEFT, Fine-tuning, Evaluation pipelines',
-    icon: <TrendingIcon />,
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg',
   },
   {
     id: 8,
     name: 'Deployment',
     category: 'Hugging Face Spaces, Uvicorn, Docker-based workflows',
-    icon: <LayersIcon />,
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
   },
 ];
 
