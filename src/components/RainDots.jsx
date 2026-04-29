@@ -1,16 +1,19 @@
 import React, { useMemo } from 'react';
 import './RainDots.css';
 
+const snowflakes = ['❄', '❅', '❆'];
+
 export default function RainDots() {
-  // Generate a random set of dots only once
+  // Generate a random set of snowflakes only once
   const dots = useMemo(() => {
-    return Array.from({ length: 80 }, (_, i) => ({
+    return Array.from({ length: 60 }, (_, i) => ({
       id: i,
       left: `${Math.random() * 100}%`,
       delay: `${Math.random() * 8}s`,
-      duration: `${4 + Math.random() * 3}s`,
-      size: `${2 + Math.random() * 3}px`,
-      opacity: Math.random() * 0.5 + 0.2
+      duration: `${5 + Math.random() * 5}s`,
+      size: `${8 + Math.random() * 8}px`,
+      opacity: Math.random() * 0.6 + 0.2,
+      char: snowflakes[Math.floor(Math.random() * snowflakes.length)]
     }));
   }, []);
 
@@ -24,11 +27,12 @@ export default function RainDots() {
             left: dot.left,
             animationDelay: dot.delay,
             animationDuration: dot.duration,
-            width: dot.size,
-            height: dot.size,
+            fontSize: dot.size,
             opacity: dot.opacity
           }}
-        />
+        >
+          {dot.char}
+        </div>
       ))}
     </div>
   );

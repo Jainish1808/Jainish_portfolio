@@ -13,16 +13,16 @@
 
 .rain-dot {
   position: absolute;
-  top: -20px;
-  background: var(--white);
-  border-radius: 50%;
+  top: -40px;
+  color: var(--white);
   animation: rain-fall linear infinite;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  user-select: none;
 }
 
 @keyframes rain-fall {
   0% {
-    transform: translateY(0);
+    transform: translateY(0) rotate(0deg);
     opacity: 0;
   }
   10% {
@@ -35,7 +35,7 @@
     opacity: 0;
   }
   100% {
-    transform: translateY(600px);
+    transform: translateY(600px) rotate(360deg);
     opacity: 0;
   }
 }
